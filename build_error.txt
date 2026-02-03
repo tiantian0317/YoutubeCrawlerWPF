@@ -1,0 +1,11 @@
+﻿  姝ｅ湪纭畾瑕佽繕鍘熺殑椤圭洰鈥?
+  宸茶繕鍘?C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj (鐢ㄦ椂 4.22 绉?銆?
+C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(113,30): error CS0168: 澹版槑浜嗗彉閲忊€渆x鈥濓紝浣嗕粠鏈娇鐢ㄨ繃 [C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+
+鐢熸垚澶辫触銆?
+
+C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(113,30): error CS0168: 澹版槑浜嗗彉閲忊€渆x鈥濓紝浣嗕粠鏈娇鐢ㄨ繃 [C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+    0 涓鍛?
+    1 涓敊璇?
+
+宸茬敤鏃堕棿 00:00:05.55

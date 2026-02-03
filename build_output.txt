@@ -1,0 +1,14 @@
+﻿  姝ｅ湪纭畾瑕佽繕鍘熺殑椤圭洰鈥?
+  宸茶繕鍘?C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj (鐢ㄦ椂 282 姣)銆?
+C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(170,36): error CS8602: 瑙ｅ紩鐢ㄥ彲鑳藉嚭鐜扮┖寮曠敤銆?[C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(278,22): error CS1061: 鈥渟tring[]鈥濇湭鍖呭惈鈥淲here鈥濈殑瀹氫箟锛屽苟涓旀壘涓嶅埌鍙帴鍙楃涓€涓€渟tring[]鈥濈被鍨嬪弬鏁扮殑鍙闂墿灞曟柟娉曗€淲here鈥?鏄惁缂哄皯 using 鎸囦护鎴栫▼搴忛泦寮曠敤?) [C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+
+鐢熸垚澶辫触銆?
+
+C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(170,36): error CS8602: 瑙ｅ紩鐢ㄥ彲鑳藉嚭鐜扮┖寮曠敤銆?[C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(278,22): error CS1061: 鈥渟tring[]鈥濇湭鍖呭惈鈥淲here鈥濈殑瀹氫箟锛屽苟涓旀壘涓嶅埌鍙帴鍙楃涓€涓€渟tring[]鈥濈被鍨嬪弬鏁扮殑鍙闂墿灞曟柟娉曗€淲here鈥?鏄惁缂哄皯 using 鎸囦护鎴栫▼搴忛泦寮曠敤?) [C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+    0 涓鍛?
+    2 涓敊璇?
+
+宸茬敤鏃堕棿 00:00:01.59
+

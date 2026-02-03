@@ -1,0 +1,11 @@
+﻿  正在确定要还原的项目…
+  已还原 c:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj (用时 290 毫秒)。
+c:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(113,30): error CS0168: 声明了变量“ex”，但从未使用过 [c:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+
+生成失败。
+
+c:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\MainWindow.xaml.cs(113,30): error CS0168: 声明了变量“ex”，但从未使用过 [c:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\YoutubeCrawlerWPF.csproj]
+    0 个警告
+    1 个错误
+
+已用时间 00:00:01.72

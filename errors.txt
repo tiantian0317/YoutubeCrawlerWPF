@@ -1,0 +1,13 @@
+﻿
+> C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\DataViewerWindow.xaml(64,19): error MC3000: 鈥?SelectionMo
+de' is a duplicate attribute name. Line 64, position 19.鈥漍ML 鏃犳晥銆?[C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCra
+wlerWPF\YoutubeCrawlerWPF.csproj]
+  
+  鐢熸垚澶辫触銆?
+> C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCrawlerWPF\DataViewerWindow.xaml(64,19): error MC3000: 鈥?SelectionMo
+de' is a duplicate attribute name. Line 64, position 19.鈥漍ML 鏃犳晥銆?[C:\Users\Administrator\GIT\YoutubeExplode\YoutubeCra
+wlerWPF\YoutubeCrawlerWPF.csproj]
+      0 涓鍛?
+      1 涓敊璇?
+
+

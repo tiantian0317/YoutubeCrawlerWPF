@@ -1,0 +1,157 @@
+<Window x:Class="YoutubeCrawlerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="YouTube数据分析系统" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#f5f5f5">
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- 标题栏 -->
+        <Border Grid.Row="0" Background="#2196F3" Padding="15" Margin="0,0,0,10" CornerRadius="5">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Text="YouTube数据分析系统" 
+                           Foreground="White" 
+                           FontSize="24" 
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="自媒体全家桶用户群：1076150045" 
+                           Foreground="#ffeb3b" 
+                           FontSize="12" 
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+        
+        <!-- 主内容区域 -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <!-- 左侧操作面板 -->
+            <Border Grid.Column="0" Background="White" Margin="0,0,10,0" CornerRadius="5" BorderBrush="#ddd" BorderThickness="1">
+                <StackPanel Margin="15">
+                    <TextBlock Text="数据采集" FontWeight="Bold" Margin="5,0,5,15" FontSize="16"/>
+                    
+                    <Button Content="关键词搜索" Click="KeywordCrawl_Click" Background="#4CAF50" Foreground="White"/>
+                    <Button Content="频道内容采集" Click="ChannelCrawl_Click" Background="#2196F3" Foreground="White"/>
+                    <Button Content="播放列表采集" Click="PlaylistCrawl_Click" Background="#FF9800" Foreground="White"/>
+                    <Button Content="URL列表采集" Click="UrlListCrawl_Click" Background="#9C27B0" Foreground="White"/>
+                    
+                    <Separator Margin="5,20"/>
+                    
+                    <TextBlock Text="数据管理" FontWeight="Bold" Margin="5,0,5,15" FontSize="16"/>
+                    
+                    <Button Content="查看数据" Click="ViewDatabaseData_Click" Background="#3F51B5" Foreground="White"/>
+                    <Button Content="导出到Excel" Click="ExportToExcel_Click" Background="#607D8B" Foreground="White"/>
+                    <Button Content="查看任务状态" Click="ShowTaskStatus_Click" Background="#795548" Foreground="White"/>
+                    <Button Content="清空数据库" Click="ClearDatabase_Click" Background="#F44336" Foreground="White"/>
+                </StackPanel>
+            </Border>
+            
+            <!-- 右侧详细信息面板 -->
+            <Border Grid.Column="1" Background="White" CornerRadius="5" BorderBrush="#ddd" BorderThickness="1">
+                <Grid Margin="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!-- 输入参数区域 -->
+                    <GroupBox Grid.Row="0" Header="采集参数" Margin="5" FontSize="14">
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Grid.Column="0" Content="关键词/ID:" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" x:Name="txtKeyword"
+                                         GotFocus="TextBox_GotFocus"
+                                         LostFocus="TextBox_LostFocus">
+                                    <TextBox.Tag>
+                                        输入关键词、频道ID或播放列表ID
+                                    </TextBox.Tag>
+                                </TextBox>
+                            </Grid>
+                            
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Grid.Column="0" Content="最大数量:" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" x:Name="txtMaxItems" Text="100"/>
+                            </Grid>
+                            
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Grid.Column="0" Content="URL文件:" VerticalAlignment="Center"/>
+                                <TextBox Grid.Column="1" x:Name="txtUrlFile" Text="未选择文件" IsReadOnly="True" Background="#f0f0f0"/>
+                                <Button Grid.Column="2" Content="浏览..." Click="SelectUrlFile_Click" Width="80" Margin="5,0,0,0"/>
+                            </Grid>
+                            
+                            <Button Content="开始采集" Click="StartCrawl_Click" 
+                                    Background="#4CAF50" Foreground="White"
+                                    HorizontalAlignment="Center" Margin="0,10"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <!-- 日志输出区域 -->
+                    <GroupBox Grid.Row="1" Header="运行日志" Margin="5" FontSize="14">
+                        <ScrollViewer x:Name="scrollViewer" VerticalScrollBarVisibility="Auto">
+                            <TextBox x:Name="txtLog" 
+                                     IsReadOnly="True" 
+                                     TextWrapping="Wrap"
+                                     Background="#f9f9f9"
+                                     BorderThickness="0"
+                                     FontFamily="Consolas"
+                                     FontSize="12"/>
+                        </ScrollViewer>
+                    </GroupBox>
+                    
+                    <!-- 状态栏 -->
+                    <StatusBar Grid.Row="2">
+                        <StatusBarItem>
+                            <TextBlock x:Name="statusText" Text="就绪"/>
+                        </StatusBarItem>
+                        <Separator/>
+                        <StatusBarItem HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="任务数: " Margin="5,0"/>
+                                <TextBlock x:Name="txtTaskCount" Text="0" FontWeight="Bold"/>
+                            </StackPanel>
+                        </StatusBarItem>
+                    </StatusBar>
+                </Grid>
+            </Border>
+        </Grid>
+        
+        <!-- 底部操作提示 -->
+        <Border Grid.Row="2" Background="#fff3e0" Padding="10" Margin="0,10,0,0" CornerRadius="5">
+            <StackPanel>
+                <TextBlock Text="💡 提示：选择左侧采集类型，然后输入相关参数，点击'开始采集'按钮。流信息获取已禁用，仅采集视频和频道元数据。" 
+                           Foreground="#e65100" TextWrapping="Wrap"/>
+                <TextBlock Text="📢 自媒体全家桶用户群：1076150045" 
+                           Foreground="#d32f2f" 
+                           FontWeight="Bold"
+                           Margin="0,5,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
